@@ -48,9 +48,9 @@ To get started with the Weather App, please follow the steps below:
    composer install
    ```
 
-8. Rename the `.env.example` file to `.env`:
+8. Create `.env` file:
    ```
-   mv .env.example .env
+   touch .env
    ```
 
 9. Generate a unique application key:
