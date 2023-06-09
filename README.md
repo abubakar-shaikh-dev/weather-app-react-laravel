@@ -1,7 +1,5 @@
 # Weather App
 
-![Weather App](weather-app-screenshot.png)
-
 Welcome to the Weather App repository! This project is a weather application built with React (front-end) and Laravel (back-end). The React application makes a GET request to the Laravel back-end, which fetches data from the OpenWeather API. Axios is used for data fetching in both the front-end and back-end.
 
 ## Installation
