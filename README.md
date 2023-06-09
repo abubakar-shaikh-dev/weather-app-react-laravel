@@ -20,7 +20,7 @@ To get started with the Weather App, please follow the steps below:
 
 3. Create `.env` file:
    ```
-   mv .env.example .env
+   touch .env
    ```
 
 4. Open the `.env` file in the `server` directory and update the following configurations:
