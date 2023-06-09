@@ -23,7 +23,13 @@ To get started with the Weather App, please follow the steps below:
    npm install
    ```
 
-4. Build and run the development server:
+4. Create a `.env` file in the `client` directory and add the following configuration:
+   ```dotenv
+   VITE_API_URL=http://127.0.0.1:8000/api
+   ```
+   This configuration sets the API URL for the React frontend to communicate with the Laravel backend.
+
+5. Build and run the development server:
    ```
    npm run dev
    ```
@@ -32,37 +38,37 @@ To get started with the Weather App, please follow the steps below:
 
 ### Backend (Laravel)
 
-5. Open a new terminal window and navigate to the `server` directory:
+6. Open a new terminal window and navigate to the `server` directory:
    ```
    cd weather-app-react-laravel/server
    ```
 
-6. Install the required dependencies using composer:
+7. Install the required dependencies using composer:
    ```
    composer install
    ```
 
-7. Rename the `.env.example` file to `.env`:
+8. Rename the `.env.example` file to `.env`:
    ```
    mv .env.example .env
    ```
 
-8. Generate a unique application key:
+9. Generate a unique application key:
    ```
    php artisan key:generate
    ```
 
-9. Create an OpenWeather account and obtain an API key:
+10. Create an OpenWeather account and obtain an API key:
 
-   - Visit the OpenWeather website: [https://openweathermap.org](https://openweathermap.org).
-   - Click on the "Sign Up" button located at the top right corner of the page.
-   - Fill in the required details and create your account.
-   - After successfully creating the account, log in to the OpenWeather website.
-   - Go to your account dashboard and locate the API keys section.
-   - Generate a new API key by providing a name for your key and selecting the appropriate subscription plan.
-   - Copy the generated API key.
+    - Visit the OpenWeather website: [https://openweathermap.org](https://openweathermap.org).
+    - Click on the "Sign Up" button located at the top right corner of the page.
+    - Fill in the required details and create your account.
+    - After successfully creating the account, log in to the OpenWeather website.
+    - Go to your account dashboard and locate the API keys section.
+    - Generate a new API key by providing a name for your key and selecting the appropriate subscription plan.
+    - Copy the generated API key.
 
-10. Open the `.env` file in the `server` directory and update the following configurations:
+11. Open the `.env` file in the `server` directory and update the following configurations:
 
     ```dotenv
     APP_NAME=Laravel
@@ -73,14 +79,14 @@ To get started with the Weather App, please follow the steps below:
     OPENWEATHER_API_KEY=[OpenWeather API Key]
     ```
 
-    Replace `[Generated App Key]` with the application key generated in step 8 and `[OpenWeather API Key]` with the copied API key from step 9.
+    Replace `[Generated App Key]` with the application key generated in step 9 and `[OpenWeather API Key]` with the copied API key from step 10.
 
-11. Run the database migrations:
+12. Run the database migrations:
     ```
     php artisan migrate
     ```
 
-12. Start the Laravel development server:
+13. Start the Laravel development server:
     ```
     php artisan serve
     ```
@@ -95,13 +101,13 @@ Once you have completed the installation and setup process, you can start using 
 
 2. Enter the name of a city or location in the search bar and press Enter or click the "Search" button.
 
-3. The Weather App will make a request to the backend, which will fetch data from the OpenWeather API and return the weather information for the specified location.
+3. The Weather App will make a request
+
+ to the backend, which will fetch data from the OpenWeather API and return the weather information for the specified location.
 
 4. The weather details will be displayed on the screen, including the temperature, humidity, wind speed, and weather conditions.
 
-   **Note:** Make sure you have a stable internet connection to retrieve accurate
-
- weather information.
+   **Note:** Make sure you have a stable internet connection to retrieve accurate weather information.
 
 That's it! You have completed the installation, setup, and usage process for the Weather App. If you encounter any issues or have further questions, please don't hesitate to reach out for assistance at [shaikhabubakar2380@gmail.com].
 
