@@ -52,30 +52,40 @@ To get started with the Weather App, please follow the steps below:
    php artisan key:generate
    ```
 
-9. Open the `.env` file and update the following configurations:
+9. Create an OpenWeather account and obtain an API key:
 
-   ```dotenv
-   APP_NAME=Laravel
-   APP_ENV=local
-   APP_KEY=[Generated App Key]
-   APP_DEBUG=true
-   APP_URL=http://localhost:8000
-   OPENWEATHER_API_KEY=[OpenWeather API Key]
-   ```
+   - Visit the OpenWeather website: [https://openweathermap.org](https://openweathermap.org).
+   - Click on the "Sign Up" button located at the top right corner of the page.
+   - Fill in the required details and create your account.
+   - After successfully creating the account, log in to the OpenWeather website.
+   - Go to your account dashboard and locate the API keys section.
+   - Generate a new API key by providing a name for your key and selecting the appropriate subscription plan.
+   - Copy the generated API key.
 
-   Make sure to replace `[Generated App Key]` with the application key generated in the previous step and `[OpenWeather API Key]` with your API key obtained from OpenWeather after creating an account.
+10. Open the `.env` file in the `server` directory and update the following configurations:
 
-10. Run the database migrations:
+    ```dotenv
+    APP_NAME=Laravel
+    APP_ENV=local
+    APP_KEY=[Generated App Key]
+    APP_DEBUG=true
+    APP_URL=http://localhost:8000
+    OPENWEATHER_API_KEY=[OpenWeather API Key]
+    ```
+
+    Replace `[Generated App Key]` with the application key generated in step 8 and `[OpenWeather API Key]` with the copied API key from step 9.
+
+11. Run the database migrations:
     ```
     php artisan migrate
     ```
 
-11. Start the Laravel development server:
+12. Start the Laravel development server:
     ```
     php artisan serve
     ```
 
-   The Laravel backend will be running at [http://localhost:8000](http://localhost:8000).
+    The Laravel backend will be running at [http://localhost:8000](http://localhost:8000).
 
 ## Usage
 
@@ -89,25 +99,9 @@ Once you have completed the installation and setup process, you can start using 
 
 4. The weather details will be displayed on the screen, including the temperature, humidity, wind speed, and weather conditions.
 
-   **Note:** Make sure you have a stable internet connection to retrieve accurate weather information.
+   **Note:** Make sure you have a stable internet connection to retrieve accurate
 
-Please note that it is important to create an OpenWeather account and obtain an API key to access their API. Here are the steps to create an OpenWeather account and obtain the API key:
-
-1. Visit the OpenWeather website: [https://openweathermap.org](https://openweathermap.org).
-
-2. Click on the "Sign Up" button located at the top right corner of the page.
-
-3. Fill in the required details and create your account.
-
-4. After successfully creating the account, log in to the OpenWeather website.
-
-5. Go to your account dashboard and locate the API keys section.
-
-6
-
-. Generate a new API key by providing a name for your key and selecting the appropriate subscription plan.
-
-7. Copy the generated API key and use it to replace `[OpenWeather API Key]` in the `.env` file of the Laravel backend.
+ weather information.
 
 That's it! You have completed the installation, setup, and usage process for the Weather App. If you encounter any issues or have further questions, please don't hesitate to reach out for assistance at [shaikhabubakar2380@gmail.com].
 
