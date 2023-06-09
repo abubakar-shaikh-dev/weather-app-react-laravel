@@ -20,7 +20,7 @@ To get started with the Weather App, please follow the steps below:
 
 3. Create `.env` file:
    ```
-   touch .env
+   mv .env.example .env
    ```
 
 4. Open the `.env` file in the `server` directory and update the following configurations:
@@ -36,7 +36,22 @@ To get started with the Weather App, please follow the steps below:
 
    Replace `[OpenWeather API Key]` with the API key obtained from your OpenWeather account.
 
-5. Start the Laravel development server:
+5. Install the required dependencies using composer:
+   ```
+   composer install
+   ```
+
+6. Generate a unique application key:
+   ```
+   php artisan key:generate
+   ```
+
+7. Run the database migrations:
+   ```
+   php artisan migrate
+   ```
+
+8. Start the Laravel development server:
    ```
    php artisan serve
    ```
@@ -45,28 +60,28 @@ To get started with the Weather App, please follow the steps below:
 
 ### Frontend (React)
 
-6. Open a new terminal window and navigate to the `client` directory:
+9. Open a new terminal window and navigate to the `client` directory:
    ```
    cd weather-app-react-laravel/client
    ```
 
-7. Install the required dependencies using npm:
-   ```
-   npm install
-   ```
+10. Install the required dependencies using npm:
+    ```
+    npm install
+    ```
 
-8. Create a `.env` file in the `client` directory and add the following configuration:
-   ```dotenv
-   VITE_API_URL=http://localhost:8000/api
-   ```
-   This configuration sets the API URL for the React frontend to communicate with the Laravel backend.
+11. Create a `.env` file in the `client` directory and add the following configuration:
+    ```dotenv
+    VITE_API_URL=http://localhost:8000/api
+    ```
+    This configuration sets the API URL for the React frontend to communicate with the Laravel backend.
 
-9. Build and run the development server:
-   ```
-   npm run dev
-   ```
+12. Build and run the development server:
+    ```
+    npm run dev
+    ```
 
-   The React frontend will be accessible at [http://localhost:5173](http://localhost:5173).
+    The React frontend will be accessible at [http://localhost:5173](http://localhost:5173).
 
 ## Usage
 
@@ -84,4 +99,6 @@ Once you have completed the installation and setup process, you can start using 
 
 That's it! You have completed the installation, setup, and usage process for the Weather App. If you encounter any issues or have further questions, please don't hesitate to reach out for assistance at [shaikhabubakar2380@gmail.com].
 
-Enjoy using the Weather App and stay informed about the weather conditions in your desired locations!
+Enjoy using the
+
+ Weather App and stay informed about the weather conditions in your desired locations!
