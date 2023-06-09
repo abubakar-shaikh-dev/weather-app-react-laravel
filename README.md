@@ -88,12 +88,10 @@ Once you have completed the installation and setup process, you can start using 
 
 3. The Weather App will make a request to the backend, which will fetch data from the OpenWeather API and return the weather information for the specified location.
 
-4. The weather details will be displayed on the screen, including the temperature, humidity, wind speed, and weather conditions.
+4. The weather details will be displayed on the screen, including the temperature & humidity.
 
    **Note:** Make sure you have a stable internet connection to retrieve accurate weather information.
 
 That's it! You have completed the installation, setup, and usage process for the Weather App. If you encounter any issues or have further questions, please don't hesitate to reach out for assistance at [shaikhabubakar2380@gmail.com].
 
-Enjoy using the
-
- Weather App and stay informed about the weather conditions in your desired locations!
+Enjoy using the Weather App and stay informed about the weather conditions in your desired locations!
