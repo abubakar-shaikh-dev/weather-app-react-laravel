@@ -62,6 +62,7 @@ export default function App() {
               placeholder="Enter City Name"
               className="rounded-full input input-bordered w-full max-w-xs"
               {...register("location")}
+              style="background: #fff;"
             />
             <button type="submit" className="btn btn-neutral rounded-full">
               <svg
