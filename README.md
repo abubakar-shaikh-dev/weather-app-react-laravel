@@ -11,87 +11,77 @@ To get started with the Weather App, please follow the steps below:
    git clone https://github.com/abubakar-shaikh-dev/weather-app-react-laravel.git
    ```
 
-### Frontend (React)
-
-2. Navigate to the `client` directory:
-   ```
-   cd weather-app-react-laravel/client
-   ```
-
-3. Install the required dependencies using npm:
-   ```
-   npm install
-   ```
-
-4. Create a `.env` file in the `client` directory and add the following configuration:
-   ```dotenv
-   VITE_API_URL=http://127.0.0.1:8000/api
-   ```
-   This configuration sets the API URL for the React frontend to communicate with the Laravel backend.
-
-5. Build and run the development server:
-   ```
-   npm run dev
-   ```
-
-   The React frontend will be accessible at [http://localhost:5173](http://localhost:5173).
-
 ### Backend (Laravel)
 
-6. Open a new terminal window and navigate to the `server` directory:
+2. Open a new terminal window and navigate to the `server` directory:
    ```
    cd weather-app-react-laravel/server
    ```
 
-7. Install the required dependencies using composer:
-   ```
-   composer install
-   ```
-
-8. Create `.env` file:
+3. Create `.env` file:
    ```
    touch .env
    ```
 
-9. Generate a unique application key:
+4. Open the `.env` file in the `server` directory and update the following configurations:
+
+   ```dotenv
+   APP_NAME=Laravel
+   APP_ENV=local
+   APP_KEY=base64:Oop9WxSSYNcMOop4/WaRaJG3VSP94RLrTxnZSv+5lgA=
+   APP_DEBUG=true
+   APP_URL=http://localhost:8000
+   OPENWEATHER_API_KEY=[OpenWeather API Key]
+   ```
+
+   Replace `[OpenWeather API Key]` with the API key obtained from your OpenWeather account.
+
+5. Install the required dependencies using composer:
+   ```
+   composer install
+   ```
+
+6. Generate a unique application key:
    ```
    php artisan key:generate
    ```
 
-10. Create an OpenWeather account and obtain an API key:
+7. Run the database migrations:
+   ```
+   php artisan migrate
+   ```
 
-    - Visit the OpenWeather website: [https://openweathermap.org](https://openweathermap.org).
-    - Click on the "Sign Up" button located at the top right corner of the page.
-    - Fill in the required details and create your account.
-    - After successfully creating the account, log in to the OpenWeather website.
-    - Go to your account dashboard and locate the API keys section.
-    - Generate a new API key by providing a name for your key and selecting the appropriate subscription plan.
-    - Copy the generated API key.
+8. Start the Laravel development server:
+   ```
+   php artisan serve
+   ```
 
-11. Open the `.env` file in the `server` directory and update the following configurations:
+   The Laravel backend will be running at [http://localhost:8000](http://localhost:8000).
 
+### Frontend (React)
+
+9. Open a new terminal window and navigate to the `client` directory:
+   ```
+   cd weather-app-react-laravel/client
+   ```
+
+10. Install the required dependencies using npm:
+    ```
+    npm install
+    ```
+
+11. Create a `.env` file in the `client` directory and add the following configuration:
     ```dotenv
-    APP_NAME=Laravel
-    APP_ENV=local
-    APP_KEY=[Generated App Key]
-    APP_DEBUG=true
-    APP_URL=http://localhost:8000
-    OPENWEATHER_API_KEY=[OpenWeather API Key]
+    VITE_API_URL=http://localhost:8000/api
+    ```
+    This configuration sets the API URL for the React frontend to communicate with the Laravel backend.
+
+12. Build and run the development server:
+    ```
+    npm run dev
     ```
 
-    Replace `[Generated App Key]` with the application key generated in step 9 and `[OpenWeather API Key]` with the copied API key from step 10.
-
-12. Run the database migrations:
-    ```
-    php artisan migrate
-    ```
-
-13. Start the Laravel development server:
-    ```
-    php artisan serve
-    ```
-
-    The Laravel backend will be running at [http://localhost:8000](http://localhost:8000).
+    The React frontend will be accessible at [http://localhost:5173](http://localhost:5173).
 
 ## Usage
 
@@ -101,9 +91,7 @@ Once you have completed the installation and setup process, you can start using 
 
 2. Enter the name of a city or location in the search bar and press Enter or click the "Search" button.
 
-3. The Weather App will make a request
-
- to the backend, which will fetch data from the OpenWeather API and return the weather information for the specified location.
+3. The Weather App will make a request to the backend, which will fetch data from the OpenWeather API and return the weather information for the specified location.
 
 4. The weather details will be displayed on the screen, including the temperature, humidity, wind speed, and weather conditions.
 
