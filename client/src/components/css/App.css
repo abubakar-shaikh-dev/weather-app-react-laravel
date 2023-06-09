@@ -8,6 +8,7 @@
     background: rgb(164,242,255);
     background: linear-gradient(32deg, rgba(164,242,255,1) 0%, rgba(227,174,255,1) 68%);
       height:100vh;
+    color:#000;
 }
 
 h1{
