@@ -1,95 +1,114 @@
-# Weather App
+# Weather App - React and Laravel
 
-Welcome to the Weather App repository! This project is a weather application built with React (front-end) and Laravel (back-end). The React application makes a GET request to the Laravel back-end, which fetches data from the OpenWeather API. Axios is used for data fetching in both the front-end and back-end.
+Welcome to the Weather App repository! This project combines React for the frontend and Laravel for the backend. The React frontend makes a GET request to the Laravel backend, which fetches data from the OpenWeather API. This Markdown file will guide you through the installation steps and provide important information about setting up and using the project.
 
 ## Installation
 
-To get started with the Weather App, follow the steps below:
+To get started with the Weather App, please follow the steps below:
 
-### Cloning the Repository
-
-```shell
-git clone https://github.com/your-username/weather-app.git
-cd weather-app
-```
-
-### Front-end Setup
-
-1. Navigate to the `frontend` directory:
-
-   ```shell
-   cd frontend
+1. Clone the repository to your local machine:
+   ```
+   git clone https://github.com/abubakar-shaikh-dev/weather-app-react-laravel.git
    ```
 
-2. Install the required dependencies:
+### Frontend (React)
 
-   ```shell
+2. Navigate to the `client` directory:
+   ```
+   cd weather-app-react-laravel/client
+   ```
+
+3. Install the required dependencies using npm:
+   ```
    npm install
    ```
 
-3. Set the backend API URL as an environment variable by creating a `.env` file in the `frontend` directory. Add the following line to the `.env` file:
-
-   ```shell
-   VITE_API_URL=<backend-api-url>
+4. Build and run the development server:
    ```
-
-   Replace `<backend-api-url>` with the URL of your Laravel back-end API.
-
-   **Note:** It's important to create an account on OpenWeather and obtain an API key. The API key is necessary for the application to fetch weather data successfully.
-
-4. Run the development server:
-
-   ```shell
    npm run dev
    ```
 
-   The React front-end will be served on [http://localhost:3000](http://localhost:3000).
+   The React frontend will be accessible at [http://localhost:5173](http://localhost:5173).
 
-### Back-end Setup
+### Backend (Laravel)
 
-1. Navigate to the `backend` directory:
-
-   ```shell
-   cd backend
+5. Open a new terminal window and navigate to the `server` directory:
+   ```
+   cd weather-app-react-laravel/server
    ```
 
-2. Install the required dependencies:
-
-   ```shell
+6. Install the required dependencies using composer:
+   ```
    composer install
    ```
 
-3. Create a `.env` file in the `backend` directory and add the following lines:
-
-   ```plaintext
-   APP_NAME=Laravel
-   APP_ENV=local
-   APP_KEY=base64:Oop9WxSSYNcMOop4/WaRaJG3VSP94RLrTxnZSv+5lgA=
-   APP_DEBUG=true
-   APP_URL=http://localhost
-   OPENWEATHER_API_KEY=<openweather-api-key>
+7. Rename the `.env.example` file to `.env`:
+   ```
+   mv .env.example .env
    ```
 
-   Replace `<openweather-api-key>` with the API key obtained from OpenWeather after creating an account.
-
-4. Generate an application key:
-
-   ```shell
+8. Generate a unique application key:
+   ```
    php artisan key:generate
    ```
 
-5. Run the Laravel development server:
+9. Open the `.env` file and update the following configurations:
 
-   ```shell
-   php artisan serve
+   ```dotenv
+   APP_NAME=Laravel
+   APP_ENV=local
+   APP_KEY=[Generated App Key]
+   APP_DEBUG=true
+   APP_URL=http://localhost:8000
+   OPENWEATHER_API_KEY=[OpenWeather API Key]
    ```
 
-   The Laravel back-end will be served on [http://localhost:8000](http://localhost:8000).
+   Make sure to replace `[Generated App Key]` with the application key generated in the previous step and `[OpenWeather API Key]` with your API key obtained from OpenWeather after creating an account.
+
+10. Run the database migrations:
+    ```
+    php artisan migrate
+    ```
+
+11. Start the Laravel development server:
+    ```
+    php artisan serve
+    ```
+
+   The Laravel backend will be running at [http://localhost:8000](http://localhost:8000).
 
 ## Usage
 
-Once you have completed the installation steps, you can access the Weather App by opening [http://localhost:3000](http://localhost:3000) in your browser. The application will display the current weather information for a specified location.
+Once you have completed the installation and setup process, you can start using the Weather App. Follow the steps below to retrieve weather information:
 
-Feel free to explore the codebase and customize the application to suit your needs. If you encounter any issues or have any questions, please don't hesitate to reach out.
+1. Open your web browser and go to [http://localhost:5173](http://localhost:5173) to access the React frontend.
 
-Happy coding!
+2. Enter the name of a city or location in the search bar and press Enter or click the "Search" button.
+
+3. The Weather App will make a request to the backend, which will fetch data from the OpenWeather API and return the weather information for the specified location.
+
+4. The weather details will be displayed on the screen, including the temperature, humidity, wind speed, and weather conditions.
+
+   **Note:** Make sure you have a stable internet connection to retrieve accurate weather information.
+
+Please note that it is important to create an OpenWeather account and obtain an API key to access their API. Here are the steps to create an OpenWeather account and obtain the API key:
+
+1. Visit the OpenWeather website: [https://openweathermap.org](https://openweathermap.org).
+
+2. Click on the "Sign Up" button located at the top right corner of the page.
+
+3. Fill in the required details and create your account.
+
+4. After successfully creating the account, log in to the OpenWeather website.
+
+5. Go to your account dashboard and locate the API keys section.
+
+6
+
+. Generate a new API key by providing a name for your key and selecting the appropriate subscription plan.
+
+7. Copy the generated API key and use it to replace `[OpenWeather API Key]` in the `.env` file of the Laravel backend.
+
+That's it! You have completed the installation, setup, and usage process for the Weather App. If you encounter any issues or have further questions, please don't hesitate to reach out for assistance at [shaikhabubakar2380@gmail.com].
+
+Enjoy using the Weather App and stay informed about the weather conditions in your desired locations!
