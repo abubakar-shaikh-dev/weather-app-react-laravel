@@ -36,22 +36,7 @@ To get started with the Weather App, please follow the steps below:
 
    Replace `[OpenWeather API Key]` with the API key obtained from your OpenWeather account.
 
-5. Install the required dependencies using composer:
-   ```
-   composer install
-   ```
-
-6. Generate a unique application key:
-   ```
-   php artisan key:generate
-   ```
-
-7. Run the database migrations:
-   ```
-   php artisan migrate
-   ```
-
-8. Start the Laravel development server:
+5. Start the Laravel development server:
    ```
    php artisan serve
    ```
@@ -60,28 +45,28 @@ To get started with the Weather App, please follow the steps below:
 
 ### Frontend (React)
 
-9. Open a new terminal window and navigate to the `client` directory:
+6. Open a new terminal window and navigate to the `client` directory:
    ```
    cd weather-app-react-laravel/client
    ```
 
-10. Install the required dependencies using npm:
-    ```
-    npm install
-    ```
+7. Install the required dependencies using npm:
+   ```
+   npm install
+   ```
 
-11. Create a `.env` file in the `client` directory and add the following configuration:
-    ```dotenv
-    VITE_API_URL=http://localhost:8000/api
-    ```
-    This configuration sets the API URL for the React frontend to communicate with the Laravel backend.
+8. Create a `.env` file in the `client` directory and add the following configuration:
+   ```dotenv
+   VITE_API_URL=http://localhost:8000/api
+   ```
+   This configuration sets the API URL for the React frontend to communicate with the Laravel backend.
 
-12. Build and run the development server:
-    ```
-    npm run dev
-    ```
+9. Build and run the development server:
+   ```
+   npm run dev
+   ```
 
-    The React frontend will be accessible at [http://localhost:5173](http://localhost:5173).
+   The React frontend will be accessible at [http://localhost:5173](http://localhost:5173).
 
 ## Usage
 
