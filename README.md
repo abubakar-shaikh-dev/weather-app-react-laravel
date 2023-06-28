@@ -94,4 +94,28 @@ Once you have completed the installation and setup process, you can start using 
 
 That's it! You have completed the installation, setup, and usage process for the Weather App. If you encounter any issues or have further questions, please don't hesitate to reach out for assistance at [shaikhabubakar2380@gmail.com].
 
+
+## OpenWeather API Key
+
+To fetch weather data, the Weather App requires an API key from OpenWeather. Follow these steps to create an account and obtain the API key:
+
+1. Visit the [OpenWeather website](https://openweathermap.org/) and click on "Sign Up" to create a new account.
+
+2. After creating an account, log in and navigate to your profile settings.
+
+3. In the profile settings, you will find your API key. Copy the API key.
+
+4. Open the `.env` file in the backend directory and update the `OPENWEATHER_API_KEY` variable with your API key.
+
+Please note that the API key is crucial for accessing the OpenWeather API and must be kept confidential.
+
+For any further assistance or troubleshooting, refer to the project documentation or contact the repository owner.
+
+Happy weather forecasting!
+
+---
+
+Repository: [weather-app-react-laravel](https://github.com/abubakar-shaikh-dev/weather-app-react-laravel)
+Author: [abubakar-shaikh-dev](https://github.com/abubakar-shaikh-dev)
+
 Enjoy using the Weather App and stay informed about the weather conditions in your desired locations!
